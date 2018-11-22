@@ -1,4 +1,4 @@
-import AppIconsApp from './components/App.vue'
+import AppIconsApp from './App.vue'
 
 new Vue({
   el: '#app-icons',
