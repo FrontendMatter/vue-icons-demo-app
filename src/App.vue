@@ -6,7 +6,9 @@
     </form>
 
     <div class="card">
-      <ul class="nav nav-tabs">
+      <ul
+        :class="navClass" 
+        class="nav nav-tabs">
         <li 
           class="nav-item" 
           v-for="tab in tabs">
@@ -34,6 +36,12 @@
   import AppFontAwesomeIcons from './AppFontAwesomeIcons.vue'
 
   export default {
+    props: {
+      navClass: {
+        type: [String, Array, Object],
+        default: null
+      }
+    },
     data() {
       return {
         tabs: [{
