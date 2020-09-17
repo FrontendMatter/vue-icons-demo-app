@@ -7,6 +7,12 @@
     components: {
       AppMaterialIcon
     },
+    props: {
+      materialIconsDataPath: {
+        type: String,
+        default: () => 'assets/data/material-icons/MaterialIcons-Regular.ijmap'
+      }
+    },
     data() {
       return {
         iconComponent: 'app-material-icon'
@@ -15,7 +21,7 @@
     methods: {
       getIcons() {
         $.ajax({
-          url: 'assets/data/material-icons/MaterialIcons-Regular.ijmap',
+          url: this.materialIconsDataPath,
           method: 'GET',
           dataType: 'json',
           success: (data) => {

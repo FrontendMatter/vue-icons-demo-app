@@ -24,7 +24,10 @@
       </ul>
       <div class="card-body">
         <keep-alive>
-          <component :is="libraryComponent" :search="search"></component>
+          <component 
+            :is="libraryComponent" 
+            :search="search"
+            :material-icons-data-path="materialIconsDataPath"></component>
         </keep-alive>
       </div>
     </div>
@@ -39,6 +42,10 @@
     props: {
       navClass: {
         type: [String, Array, Object],
+        default: null
+      },
+      materialIconsDataPath: {
+        type: String,
         default: null
       }
     },
